@@ -1,8 +1,8 @@
 import React from 'react';
 //images
-import Images from '../assets/avatar.svg'
+import Images from '../assets/avatar.png'
 //icons
-import { FaGithub, FaYoutube, FaDribbble } from 'react-icons/fa'
+import { FaGithub, FaFacebookF, FaPhone } from 'react-icons/fa'
 // type animation
 import { TypeAnimation } from 'react-type-animation'
 // motion
@@ -21,7 +21,7 @@ const Banner = () => {
               <motion.h1
                 variants={fadeIn('up', 0.3)} initial="hidden"
                 whileInView={'show'} viewport={{ once: false, amount: 0.7 }}
-                className='text-[55px] font-bold leading-[0.8] lg:text-[110px]'>TAM <span>AIDEN</span></motion.h1>
+                className='text-[55px] font-bold leading-[0.8] lg:text-[110px]'>TAM <span>DEV</span></motion.h1>
               <motion.div
                 variants={fadeIn('up', 0.4)} initial="hidden"
                 whileInView={'show'} viewport={{ once: false, amount: 0.7 }}
@@ -30,11 +30,9 @@ const Banner = () => {
                 <span className='text-white mr-4'>I am a</span>
                 <TypeAnimation
                   sequence={[
-                    'Developer',
+                    'FE Developer',
                     2000,
-                    'Designer',
-                    2000,
-                    'Youtube',
+                    'JS Developer',
                     2000,
                   ]}
                   speed={50}
@@ -45,8 +43,8 @@ const Banner = () => {
                 <motion.p
                   variants={fadeIn('up', 0.5)} initial="hidden"
                   whileInView={'show'} viewport={{ once: false, amount: 0.7 }}
-                  className='mb-8 max-w-lg mx-auto lg:mx-0'>
-                  Lorem ipsum dolor sit amet
+                  className='mb-8 max-w-lg mx-auto lg:mx-0 italic'>
+                  <span className='text-accent'>"</span>Do not give up!<span className='text-accent'>"</span>
                 </motion.p>
                 <motion.div
                   variants={fadeIn('up', 0.6)} initial="hidden"
@@ -60,15 +58,15 @@ const Banner = () => {
                 <motion.div
                   variants={fadeIn('up', 0.7)} initial="hidden"
                   whileInView={'show'} viewport={{ once: false, amount: 0.7 }}
-                  className='flex text-[20px] gap-x-6 max-w-max mx-auto'>
-                  <a href='#'>
-                    <FaYoutube />
+                  className='flex text-[20px] gap-x-6 max-w-full justify-center lg:justify-normal'>
+                  <a target="_blank" href='https://www.facebook.com/viet.tam.3956/'>
+                    <FaFacebookF />
                   </a>
-                  <a href='#'>
+                  <a target="_blank" href='https://github.com/ThaiQuocTam'>
                     <FaGithub />
                   </a>
-                  <a href='#'>
-                    <FaDribbble />
+                  <a target="_blank" href='https://zalo.me/s/qrwallet?fbclid=IwAR3bFlqtM_epUpEiUTrLMZTCJCkJlxh78JQ9y4BRHZdeOdZcbajm1O8B_Qk'>
+                    <FaPhone />
                   </a>
                 </motion.div>
               </motion.div>
@@ -77,8 +75,8 @@ const Banner = () => {
             <motion.div
               variants={fadeIn('down', 0.5)} initial="hidden"
               whileInView={'show'}
-              className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] mx-auto'>
-              <img src={Images} alt='image avatar' />
+              className='hidden lg:flex h-[446px] flex-1 max-w-[320px] lg:max-w-[482px] mx-auto '>
+              <img className='w-full object-none' src={Images} alt='image avatar' />
             </motion.div>
           </div>
         </div>

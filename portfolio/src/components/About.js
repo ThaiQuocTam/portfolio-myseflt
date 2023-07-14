@@ -32,16 +32,18 @@ const About = () => {
               whileInView={'show'} viewport={{ once: false, amount: 0.3 }}
               className='flex-1'>
               <h2 className='h2 text-accent'>About me</h2>
-              <h3 className='h3 mb-4'>I'm a Freelance Front-end Developer with over 1 year of experience</h3>
-              <p>
-                Description
+              <h3 className='h3 mb-4'>I enjoy challenges and constantly strive towards my goals.</h3>
+              <p className='italic'>
+                <span className='text-accent'>"</span>
+                Think and affirm yourself!
+                <span className='text-accent'>"</span>
               </p>
               {/* stats */}
-              <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
+              <div className='flex gap-x-6 lg:gap-x-10 mb-12 my-3'>
                 <div>
                   <div className='text-[40px] font-tertiary text-gradient mb-2'>
                     {inView ?
-                      <CountUp start={0} end={13} duration={3} /> : null}
+                      <CountUp start={0} end={0.5} duration={3} /> : null}
                   </div>
                   <div className='font-primary text-sm tracking-[2px]'>
                     years of <br />
@@ -52,26 +54,13 @@ const About = () => {
                 <div>
                   <div className='text-[40px] font-tertiary text-gradient mb-2'>
                     {inView ?
-                      <CountUp start={0} end={15} duration={3} /> : null}
-                    K+
+                      <CountUp start={0} end={3} duration={3} /> : null}
                   </div>
                   <div className='font-primary text-sm tracking-[2px]'>
-                    years of <br />
-                    Completed
+                    Personal project <br />
                   </div>
                 </div>
 
-                <div>
-                  <div className='text-[40px] font-tertiary text-gradient mb-2'>
-                    {inView ?
-                      <CountUp start={0} end={12} duration={3} /> : null}
-                    K+
-                  </div>
-                  <div className='font-primary text-sm tracking-[2px]'>
-                    Satisfied <br />
-                    Clients
-                  </div>
-                </div>
               </div>
               <div className='flex gap-x-8 items-center'>
                 <button className='btn btn-lg'>Contact me</button>

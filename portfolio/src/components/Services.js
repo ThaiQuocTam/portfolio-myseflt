@@ -8,15 +8,13 @@ import { fadeIn } from '../variants'
 
 const services = [
   {
-    name: 'UI/UX Design',
-    description: 'Description',
-    link: 'Learn more'
+    name: 'Web mobile',
+    framework: 'React.JS, Node.JS(Express), Tailwind CSS, Sequelize',
+    git: 'https://github.com/ThaiQuocTam/Web_mobile.git',
+    description: 'Specializing in selling electronic products and providing online shopping functionalities',
+    link: 'Demo'
   },
-  {
-    name: 'Digital Marketing',
-    description: 'Description',
-    link: 'Learn more'
-  }
+
 ]
 
 const Services = () => {
@@ -33,9 +31,8 @@ const Services = () => {
             mb-12 lg:mb-0'>
               <h2 className='h2 text-accent mb-6'>What I Do.</h2>
               <h3 className='h3 max-w-[455px] mb-16'>
-                I'm a freelancer
+                I'm a Javascript Developer
               </h3>
-              <button className='btn btn-bg'>See my work</button>
             </motion.div>
             {/* services */}
             <motion.div
@@ -44,22 +41,32 @@ const Services = () => {
               className='flex-1'>
               {/* service list */}
               {services.map((service, index) => {
-                const { name, description, link } = service;
+                const { name, description, framework, git, link } = service;
                 return (
-                  <div className='border-b border-white/20 h-[146px] mb-[38px]' key={index}>
-                    <div className='max-w-[476px]'>
-                      <h4 className='text-[20px] tracking-wider font-semibold mb-6'>{name}</h4>
-                      <p className='font-secondary leading-tight'>
-                        {description}
-                      </p>
-                      <div className='flex flex-col flex-1 items-end'>
-                        <a href='#' className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
-                          <BsArrowUpRight />
-                        </a>
-                        <a className='text-gradient text-sm' href='#'>{link}</a>
+                  <>
+                    <div className='max-w-full flex justify-center font-bold text-3xl pb-3'>
+                      <h2>Project</h2>
+                    </div>
+                    <div className='border rounded-xl p-5 border-white/20 mb-[38px]' key={index}>
+                      <div className='max-w-[500px]'>
+                        <h4 className='text-[20px] tracking-wider font-semibold mb-3'>{name}</h4>
+                        <p className='font-secondary leading-tight mb-4'>
+                          {description}
+                        </p>
+
+                        <p className='font-secondary leading-tight mb-3'>
+                          <span className='font-semibold italic '>Framework :  &nbsp; </span><span className='text-lg'>{framework}</span>
+                        </p>
+                        <p className='font-secondary leading-tight'>
+                          <span className='font-semibold italic'>Git : &nbsp; </span><a href={git}>{git}</a>
+                        </p>
+                        <div className=' flex flex-col items-start'>
+                          <a className='text-gradient text-sm' target="_blank" href='https://thaiquoctam-webmoible-user.vercel.app'>{link} user page (user@gmail.com, pass: 123)</a>
+                          <a className='text-gradient text-sm' target="_blank" href='https://thaiquoctam-webmobile-admin.vercel.app'>{link} admin page (admin@gmail.com, pass: 123)</a>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </>
                 )
               })}
             </motion.div>

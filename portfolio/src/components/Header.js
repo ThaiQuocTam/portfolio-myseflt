@@ -5,14 +5,14 @@ import Logo from '../assets/logo.svg'
 const Header = () => {
   return (
     <>
-      <header className='py-8'>
-        <div id='home' className='container mx-auto'>
+      <header className='py-5'>
+        <div id='home' className='container mx-auto pt-6'>
           <div className='flex justify-between items-center'>
             <a href='#'>
-              <img src={Logo} alt='logo' />
-
+              <span className='text-gradient btn-link font-black text-4xl'>TAM</span>
+              <br />
+              <span className='text-white btn-link font-black text-4xl'>DEVELOPER</span>
             </a>
-            <button className='btn btn-sm'>Work with me</button>
           </div>
         </div>
       </header>
