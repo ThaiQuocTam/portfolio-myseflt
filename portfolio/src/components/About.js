@@ -40,7 +40,7 @@ const About = () => {
 						>
 							<h2 className="h2 text-accent">About me</h2>
 							<h3 className="h3 mb-4">
-								I enjoy challenges and constantly strive towards my goals.
+								My name's Thai Quoc Tam - 18/03/2001, I'm Front-end Developer
 							</h3>
 							<p className="italic">
 								<span className="text-accent">"</span>
