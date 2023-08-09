@@ -9,7 +9,8 @@ import { fadeIn } from "../variants";
 const services = [
 	{
 		name: "Web mobile",
-		framework: "React.JS, Node.JS(Express), Tailwind CSS, Sequelize",
+		framework:
+			"React.JS, Node.JS(Express), Tailwind CSS, Redux, Sequelize, PostgreSQL",
 		git: "https://github.com/ThaiQuocTam/Web_mobile.git",
 		description:
 			"Specializing in selling electronic products and providing online shopping functionalities",
@@ -20,7 +21,15 @@ const services = [
 		framework: "Vue.js, Tailwind CSS",
 		git: " https://github.com/ThaiQuocTam/Vue_todo_list.git",
 		description: "Todo list app demo with vue.js",
-		link: "Demo",
+		link: "https://thaquoctam-todo-list-nmasybi1o-thaiquoctam123-gmailcom.vercel.app/",
+	},
+	{
+		name: "Dicegame",
+		framework: "ReactJS, Tailwind CSS, Solidity",
+		git: "https://github.com/ThaiQuocTam/Dicegame.git",
+		description:
+			"Simulate the game and exchange with ETH (This is a test environment)",
+		link: "https://dicegame-theta.vercel.app/",
 	},
 ];
 
@@ -29,7 +38,7 @@ const Services = () => {
 		<>
 			<section id="services" className="section">
 				<div className="container mx-auto">
-					<div className="flex flex-col lg:flex-row">
+					<div className="flex flex-col lg:flex-row pb-20">
 						{/* text && image */}
 						<motion.div
 							variants={fadeIn("right", 0.3)}
@@ -86,15 +95,15 @@ const Services = () => {
 														{git}
 													</a>
 												</p>
-												{name === "Todo list app" ? (
+												{name !== "Web mobile" ? (
 													<div className=" flex flex-col items-start">
 														<a
 															rel="noreferrer"
 															className="text-gradient text-sm"
 															target="_blank"
-															href="https://thaquoctam-todo-list-vue.vercel.app"
+															href={link}
 														>
-															{link}
+															Demo
 														</a>
 													</div>
 												) : (
@@ -105,7 +114,7 @@ const Services = () => {
 															target="_blank"
 															href="https://thaiquoctam-webmoible-user.vercel.app"
 														>
-															{link} user page (user@gmail.com, pass: 123)
+															Demo user page (user@gmail.com, pass: 123)
 														</a>
 														<a
 															rel="noreferrer"
@@ -113,7 +122,7 @@ const Services = () => {
 															target="_blank"
 															href="https://thaiquoctam-webmobile-admin.vercel.app"
 														>
-															{link} admin page (admin@gmail.com, pass: 123)
+															Demo admin page (admin@gmail.com, pass: 123)
 														</a>
 													</div>
 												)}
